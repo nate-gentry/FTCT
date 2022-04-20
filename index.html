@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Forbes Engineering Coding Test</title>
+  </head>
+  <body>
+    <h1>Summer Thumbnails from flickr</h1>
+    <div class="main-container">
+      <div class="pagination-control--container">
+        <button class="pagination-control--button" onclick="changePage(-1)">
+          <img
+            class="rotate180"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH2MgtbOUwrUvv-sCSBpE3HhM-h1dMuNfiELJW7ioBHEsqc7LgdaSTTRyhTZAEMv9NIAM&usqp=CAU"
+          />
+        </button>
+        <button class="pagination-control--button" onclick="changePage(1)">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH2MgtbOUwrUvv-sCSBpE3HhM-h1dMuNfiELJW7ioBHEsqc7LgdaSTTRyhTZAEMv9NIAM&usqp=CAU"
+          />
+        </button>
+      </div>
+      <div class="thumbnails--container">
+        <img
+          class="thumbnails--buffering"
+          src="https://cdn-icons-png.flaticon.com/512/81/81948.png"
+        />
+      </div>
+    </div>
+    <div class="modal--container">
+      <img class="modal--image" />
+      <img
+        class="modal--close"
+        onclick="closeModal()"
+        src="https://www.clipartmax.com/png/full/112-1126634_red-x-in-circle-health-and-wellness-icon.png"
+      />
+    </div>
+  </body>
+  <footer class="footer">
+    <p>Built by <a href="https://nate-gentry.vercel.app/">Nate Gentry</a></p>
+  </footer>
+</html>
+
+<script src="script.js" defer></script>

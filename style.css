@@ -1,0 +1,137 @@
+body {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-control--container {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px;
+}
+
+.pagination-control--button {
+    width: 40px;
+    height: 30px;
+
+    background: none;
+    border: none;
+
+    margin: 0 40px;
+}
+
+.pagination-control--button:hover {
+    cursor: pointer;
+}
+
+.pagination-control--button>img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.thumbnails--buffering {
+    width: 40px;
+    height: 40px;
+
+    animation-name: rotate360;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+.thumbnails--thumbnail {
+    width: 256px;
+    height: 256px;
+}
+
+.modal--container {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    ;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal--image {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.modal--close {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 4vw;
+    height: 4vw;
+
+    cursor: pointer;
+    margin: 10px;
+
+    border-radius: 50%;
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate180 {
+    transform: rotate(180deg);
+}
+
+@media(min-width:1216px) {
+    .thumbnails--container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1em;
+    }
+}
+
+@media(max-width:1215px) {
+    .thumbnails--container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+    }
+}
+
+@media(max-width:830px) {
+    .thumbnails--container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1em;
+    }
+}
+
+@media(max-width:580px) {
+    .thumbnails--container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1em;
+    }
+}
